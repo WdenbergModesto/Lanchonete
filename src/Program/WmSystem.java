@@ -14,16 +14,15 @@ public class WmSystem {
 		char resp = 'N';
 
 		do {
-			System.out.println("\n\n1. LANCHONETE WM - Clique qualquer tecla para iniciar\n" 
+			System.out.println("\n\n1. LANCHONETE WM\n" 
 					+ "ESCOLHA UMA OPÇÃO\n" 
-					+ "Código 1 - Valor R$5,00 \n"
+					+ "\nCódigo 1 - Valor R$5,00 \n"
 					+ "Código 2 - Valor R$3,50 \n" 
 					+ "Código 3 - Valor R$4,80 \n" 
 					+ "Código 4 - Valor R$8,90 \n"
 					+ "Código 5 - Valor R$7,92 \n" 
 					+ "6 - Sair do programa");
 			opcao = scan.next().charAt(0);
-
 			System.out.println("Qual a quantidade do produto: ");
 			quantidade = scan.nextInt();
 			switch (opcao) {
@@ -45,11 +44,13 @@ public class WmSystem {
 			case '6':
 				System.out.println("Deseja realmente sair do programa? S/N");
 				resp = Character.toUpperCase(scan.next().charAt(0));
+				break;
 			default:
 				System.out.println("opção inválida. Tente novamente.");
+				break;
 			}
 
-		} while (opcao != '6');
+		} while (resp != 'S');
 		System.exit(0);
 	}
 
